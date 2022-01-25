@@ -1,7 +1,8 @@
 (ns helloclojure)
 (print (str "Hello" " " "world!"))
-(defn square [x] (* x x))
+(defn square
+  "Squares a number"
+  [x] (* x x))
 (defn cube [n] (* n n n))
 (println (take 25 (map cube (range))))
-(println (take 25 (map square (range))))
-(println (take 25 (reduce + (range))))
+(println (reduce / (take 25 (map square (range)))))
